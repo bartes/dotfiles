@@ -25,6 +25,9 @@ Bundle 'gmarik/vundle'
 " PLUGINS
 "----------------------------------------------------------
 
+" ack - use ack to search through files
+Bundle 'ack.vim'
+
 " LaTeX support
 Bundle 'AutomaticTexPlugin'
 
@@ -39,6 +42,9 @@ Bundle 'wincent/Command-T'
 
 " NerdCommenter - comment blocks of code
 Bundle 'The-NERD-Commenter'
+
+" NerdTree - displays a neat file explorer window
+Bundle 'The-NERD-tree'
 
 " csapprox - make gvim colorschemes work in console
 Bundle 'CSApprox'

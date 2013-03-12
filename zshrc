@@ -18,6 +18,10 @@ export LANG=en_US.UTF-8
 alias tmux='TERM=xterm-256color tmux'
 alias mux='TERM=xterm-256color mux'
 
+export HISTCONTROL=erasedups
+export HISTSIZE=1000
+export HISTIGNORE="&:ls:[bf]g:exit"
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s "$HOME/.tmuxinator/scripts/tmuxinator" ]] && source "$HOME/.tmuxinator/scripts/tmuxinator"
 PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:/usr/X11R6/bin # Add RVM to PATH for scripting
