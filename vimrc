@@ -46,9 +46,6 @@ Bundle 'CSApprox'
 " Cofeescript support
 Bundle 'vim-coffee-script'
 
-" Coffeescript
-Bundle 'vim-coffee-script'
-
 " cucumber support
 Bundle 'tpope/vim-cucumber'
 
@@ -231,12 +228,22 @@ map <C-j> <C-w>j:wa<cr>
 map <C-k> <C-w>k:wa<cr>
 map <C-l> <C-w>l:wa<cr>
 
+" add arrows support
+
+map <C-LEFT> <C-w>h
+map <C-DOWN> <C-w>j
+map <C-UP> <C-w>k
+map <C-RIGHT> <C-w>l
+
 " syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_enable_signs=1
 let g:syntastic_disabled_filetypes = ['eruby']
+
+" nerd tree
+map <silent> <leader>n :NERDTreeFind<CR>
 
 " zencoding-vim
 let g:user_zen_expandabbr_key = '<c-e>' 
@@ -348,7 +355,7 @@ endfunction
 
 " Make the 'cw' and like commands put a $ at the end instead of just deleting
 " the text and replacing it
-" set cpoptions=ces$
+" "set cpoptions=ces$
 
 " switch between two last open files faster
 nmap <silent> <leader><leader> <c-^>
