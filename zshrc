@@ -7,7 +7,7 @@ export ZSH_THEME="gallois"
 
 export PATH=~/scripts:$PATH
 
-export EDITOR=vim
+export EDITOR=mvim
 
 export RBXOPT=-X19
 export JRUBY_OPTS="--1.9"
@@ -20,7 +20,7 @@ alias mux='TERM=xterm-256color mux'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s "$HOME/.tmuxinator/scripts/tmuxinator" ]] && source "$HOME/.tmuxinator/scripts/tmuxinator"
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:/usr/X11R6/bin # Add RVM to PATH for scripting
 
 eval "$(hub alias -s)"
 
@@ -38,7 +38,7 @@ eval "$(hub alias -s)"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler cap command-not-found deb gem git github rails3 ruby vi-mode ssh-agent)
+plugins=(brew bundler cap command-not-found deb gem git github rails3 ruby vi-mode ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 

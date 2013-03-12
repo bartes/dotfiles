@@ -348,7 +348,7 @@ endfunction
 
 " Make the 'cw' and like commands put a $ at the end instead of just deleting
 " the text and replacing it
-set cpoptions=ces$
+" set cpoptions=ces$
 
 " switch between two last open files faster
 nmap <silent> <leader><leader> <c-^>
@@ -360,11 +360,11 @@ nmap <silent> <LocalLeader>f :Ggrep <c-r><c-w> **/*rb<cr>
 nmap <silent> <LocalLeader>F :Ggrep <c-r><c-a> **/*rb<cr>
 
 " solarized settings
-set background=light
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
+" set background=light
+" let g:solarized_termtrans=1
+" let g:solarized_termcolors=256
+" let g:solarized_contrast="high"
+" let g:solarized_visibility="high"
 
 " Colors for console
 if !has("gui_running")
@@ -372,7 +372,7 @@ if !has("gui_running")
 endif
 
 " Scheme
-colorscheme solarized
+colors railscasts
 
 " don't search coverage reports and vcr cassettes
 set wildignore+=spec/reports
