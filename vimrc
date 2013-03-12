@@ -39,6 +39,7 @@ Bundle 'Better-CSS-Syntax-for-Vim'
 
 " Fuzzy file searching
 Bundle 'wincent/Command-T'
+Bundle 'ctrlp.vim'
 
 " NerdCommenter - comment blocks of code
 Bundle 'The-NERD-Commenter'
