@@ -19,6 +19,7 @@ alias tmux='TERM=xterm-256color tmux'
 alias mux='TERM=xterm-256color mux'
 
 alias be='bundle exec'
+alias gu='git-up'
 
 export HISTCONTROL=erasedups
 export HISTSIZE=1000
