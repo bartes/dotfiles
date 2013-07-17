@@ -103,7 +103,6 @@ Bundle 'tpope/vim-surround'
 " Snipmate - the new version
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "scrooloose/snipmate-snippets"
 
 Bundle "garbas/vim-snipmate"
 
