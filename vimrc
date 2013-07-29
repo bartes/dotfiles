@@ -1,8 +1,8 @@
 "==========================================================
 "
-" Psyho's .vimrc
+" Bartes's .vimrc
 "
-" heavily inspired by Peepcode screencast, Sickill 
+" heavily inspired by Psyho, Peepcode screencast, Sickill
 " and Derek Wyatt
 "
 "==========================================================
@@ -100,10 +100,13 @@ Bundle 'ervandew/supertab'
 " vim-surround - surrounding text with braces, quotes, html tags...
 Bundle 'tpope/vim-surround'
 
+" snippets
+
+Bundle "honza/vim-snippets"
+
 " Snipmate - the new version
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-
 Bundle "garbas/vim-snipmate"
 
 " vim-textobj - dependency of rubyblock
