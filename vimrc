@@ -56,7 +56,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'skwp/greplace.vim'
 
 " jslint .js files automatically
-Bundle 'hallettj/jslint.vim'
+" Bundle 'hallettj/jslint.vim'
 
 " syntastic - plugin for displaying syntax errors
 Bundle 'scrooloose/syntastic'
