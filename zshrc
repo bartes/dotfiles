@@ -27,7 +27,6 @@ export HISTIGNORE="&:ls:[bf]g:exit"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s "$HOME/.tmuxinator/scripts/tmuxinator" ]] && source "$HOME/.tmuxinator/scripts/tmuxinator"
-PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:/usr/X11R6/bin:/usr/local/share/npm/bin # Add to PATH for scripting
 
 eval "$(hub alias -s)"
 
@@ -45,9 +44,17 @@ eval "$(hub alias -s)"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler cap command-not-found deb gem git github rails3 ruby vi-mode ssh-agent)
+plugins=(brew bundler cap command-not-found gem git github rails3 ruby vi-mode ssh-agent vagrant tmuxinator screen rvm osx node last-working-dir git_remote_branch git-flow)
 
 source $ZSH/oh-my-zsh.sh
 
 # for some reason, this is necessary to make the keybindings work properly
 source ~/dotfiles/oh-my-zsh/lib/key-bindings.zsh
+
+export PATH="/usr/X11R6/bin:/usr/local/share/npm/bin:$PATH"
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

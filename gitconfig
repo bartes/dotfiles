@@ -39,8 +39,8 @@
 [merge]
   tool = vimdiff
 [user]
-	name = Bartosz Knapik 
-	email = bartosz.knapik@llp.pl
+	name = bartes
+	email = bartesrlz@gmail.com
 [color]
 	ui = auto
 [push]

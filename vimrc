@@ -43,6 +43,12 @@ Bundle 'scrooloose/nerdcommenter'
 " NerdTree - displays a neat file explorer window
 Bundle 'scrooloose/nerdtree'
 
+" Powerline is a statusline plugin for vim
+Bundle 'Lokaltog/powerline'
+
+" EasyMotion provides a much simpler way to use some motions in vim
+Bundle 'Lokaltog/vim-easymotion'
+
 " csapprox - make gvim colorschemes work in console
 Bundle 'godlygeek/csapprox'
 
@@ -100,8 +106,10 @@ Bundle 'ervandew/supertab'
 " vim-surround - surrounding text with braces, quotes, html tags...
 Bundle 'tpope/vim-surround'
 
-" snippets
+" haml
+Bundle "tpope/vim-haml"
 
+" snippets
 Bundle "honza/vim-snippets"
 
 " Snipmate - the new version
@@ -120,6 +128,9 @@ Bundle 'mattn/zencoding-vim'
 
 " LESS CSS syntax support
 Bundle "groenewege/vim-less"
+
+" Adds colors of css 
+Bundle "skammer/vim-css-color"
 
 " Clojure development plugins
 Bundle "tpope/vim-foreplay"
