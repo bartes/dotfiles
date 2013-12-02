@@ -58,3 +58,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+
+alias pg-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pg-stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'

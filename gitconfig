@@ -36,6 +36,7 @@
   ra = !git r --all
   l = "!bash -c 'source ~/.githelpers && pretty_git_log'"
   la = !git l --all
+	d = difftool
 [merge]
   tool = vimdiff
 [user]
@@ -49,3 +50,9 @@
 	recursesubmodules = true
 [github]
 	user = bartes 
+[core]
+	editor = vim
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
