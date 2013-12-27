@@ -44,7 +44,7 @@ eval "$(hub alias -s)"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler cap command-not-found gem git github rails3 ruby vi-mode ssh-agent vagrant tmuxinator screen rvm osx node last-working-dir git_remote_branch git-flow)
+plugins=(brew bundler cap command-not-found gem git github rails ruby vi-mode ssh-agent vagrant tmuxinator screen rvm osx node last-working-dir git_remote_branch git-flow)
 
 source $ZSH/oh-my-zsh.sh
 
