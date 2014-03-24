@@ -106,6 +106,9 @@ Bundle 'ervandew/supertab'
 " vim-surround - surrounding text with braces, quotes, html tags...
 Bundle 'tpope/vim-surround'
 
+" clojure support
+Bundle 'kovisoft/slimv'
+
 " haml
 Bundle "tpope/vim-haml"
 
