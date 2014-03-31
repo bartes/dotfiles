@@ -107,8 +107,6 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-surround'
 
 " clojure support
-Bundle 'kovisoft/slimv'
-
 " haml
 Bundle "tpope/vim-haml"
 
@@ -136,9 +134,10 @@ Bundle "groenewege/vim-less"
 Bundle "skammer/vim-css-color"
 
 " Clojure development plugins
-Bundle "tpope/vim-foreplay"
+" Bundle "tpope/vim-foreplay"
 Bundle "tpope/vim-classpath"
 Bundle "guns/vim-clojure-static"
+Bundle "kien/rainbow_parentheses"
 
 " rainbow parentheses, mostly for clojure
 Bundle "kien/rainbow_parentheses.vim"
