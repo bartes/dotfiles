@@ -15,142 +15,140 @@ set nocompatible                  " Must come first because it changes other opt
 filetype off                      " required by Vundle
 
 " setup Vundle
-set rtp+=~/.vim/vundle.git/ 
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 "----------------------------------------------------------
 " PLUGINS
 "----------------------------------------------------------
 
 " ack - use ack to search through files
-Bundle 'epmatsw/ag.vim'
+Plugin 'epmatsw/ag.vim'
 
 " javascript indentation in vim sucks
-Bundle 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
 
 " CSS
-Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
+Plugin 'ChrisYip/Better-CSS-Syntax-for-Vim'
 
 " Fuzzy file searching
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
 " NerdCommenter - comment blocks of code
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 
 " NerdTree - displays a neat file explorer window
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 " Powerline is a statusline plugin for vim
-Bundle 'Lokaltog/powerline'
+Plugin 'Lokaltog/powerline'
 
 " EasyMotion provides a much simpler way to use some motions in vim
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 
 " csapprox - make gvim colorschemes work in console
-Bundle 'godlygeek/csapprox'
+Plugin 'godlygeek/csapprox'
 
 " Cofeescript support
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
 
 " cucumber support
-Bundle 'tpope/vim-cucumber'
+Plugin 'tpope/vim-cucumber'
 
 " greplace.vim - plugin that allows search and replace across all of the project files
-Bundle 'skwp/greplace.vim'
+Plugin 'skwp/greplace.vim'
 
 " jslint .js files automatically
-" Bundle 'hallettj/jslint.vim'
+" Plugin 'hallettj/jslint.vim'
 
 " syntastic - plugin for displaying syntax errors
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
 " vim-endwise - wisely add 'end' in ruby
-Bundle 'tpope/vim-endwise'
+Plugin 'tpope/vim-endwise'
 
 " vim-fugitive - vim-git integration
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
 " vim-git - a couple more basic commands to work with git
-Bundle 'tpope/vim-git'
+Plugin 'tpope/vim-git'
 
 " vim-bundler to include gems from Gemfile.lock in ctags
-Bundle 'tpope/vim-bundler'
+Plugin 'tpope/vim-bundler'
 
 " vim-markdown - syntax highlighting for markdown
-Bundle 'plasticboy/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
 
 " vim-matchit - better pair matching for the % command
-Bundle 'matchit.zip'
+Plugin 'matchit.zip'
 
 " vim-rake - :Rake, :A, :R like in rails.vim, but without rails
-Bundle 'tpope/vim-rake'
+Plugin 'tpope/vim-rake'
 
 " vim-rails - awesome vim-rails integration
-Bundle 'tpope/vim-rails'
+Plugin 'tpope/vim-rails'
 
 " vim-ruby - ruby integration
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'vim-ruby/vim-ruby'
 
 " vim-ruby-refactoring - automatic refactorings for ruby
-Bundle 'ecomba/vim-ruby-refactoring'
+Plugin 'ecomba/vim-ruby-refactoring'
 
 " A nice color scheme
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 
 " cuztomizable tab completion, continued is the newer version
-Bundle 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 
-" vim-surround - surrounding text with braces, quotes, html tags...
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 
-" clojure support
 " haml
-Bundle "tpope/vim-haml"
-
+" Plugin "tpope/vim-haml"
 " snippets
-Bundle "honza/vim-snippets"
+" Plugin "honza/vim-snippets"
 
 " Snipmate - the new version
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
+" Plugin "MarcWeber/vim-addon-mw-utils"
+" Plugin "tomtom/tlib_vim"
+" Plugin "garbas/vim-snipmate"
 
 " vim-textobj - dependency of rubyblock
-Bundle 'kana/vim-textobj-user'
+Plugin 'kana/vim-textobj-user'
 
 " vim-textobj-rubyblock - allow selecting blocks in ruby as text objects
-Bundle 'nelstrom/vim-textobj-rubyblock'
+Plugin 'nelstrom/vim-textobj-rubyblock'
 
 " zencoding-vim - plugin for expanding css-like syntax to html
-Bundle 'mattn/zencoding-vim'
+Plugin 'mattn/zencoding-vim'
 
 " LESS CSS syntax support
-Bundle "groenewege/vim-less"
+" Plugin "groenewege/vim-less"
 
 " Adds colors of css 
-Bundle "skammer/vim-css-color"
+" Plugin "skammer/vim-css-color"
 
 " Clojure development plugins
-" Bundle "tpope/vim-foreplay"
-Bundle "tpope/vim-classpath"
-Bundle "guns/vim-clojure-static"
-Bundle "kien/rainbow_parentheses"
+" Plugin "tpope/vim-foreplay"
+" Plugin "tpope/vim-classpath"
+" Plugin "guns/vim-clojure-static"
+" Plugin "kien/rainbow_parentheses"
 
 " rainbow parentheses, mostly for clojure
-Bundle "kien/rainbow_parentheses.vim"
+" Plugin "kien/rainbow_parentheses.vim"
 
 " automatically close parens
-Bundle 'Townk/vim-autoclose'
+Plugin 'Townk/vim-autoclose'
 
 " Gist support
-Bundle 'mattn/gist-vim'
-"----------------------------------------------------------
+Plugin 'mattn/gist-vim'
+
+call vundle#end()
+filetype plugin indent on         " Turn on file type detection.
 
 syntax enable                     " Turn on syntax highlighting.
-filetype plugin indent on         " Turn on file type detection.
 
 runtime macros/matchit.vim        " Load the matchit plugin.
 
@@ -290,10 +288,10 @@ nnoremap qw :silent! normal "zyiw<Esc>:let @z="'".@z."'"<CR>cw<c-r>z<Esc>b
 nnoremap qd :silent! normal "zyiw<Esc>:let @z="\"".@z."\""<CR>cw<c-r>z<Esc>b
 
 " rainbow parentheses always on
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces
 
 " Don't indent midje facts
 let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', 'fact']
