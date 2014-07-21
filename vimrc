@@ -8,145 +8,142 @@
 "==========================================================
 
 "----------------------------------------------------------
-" VUNDLE
+" NeoBundle
 "----------------------------------------------------------
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-set nocompatible                  " Must come first because it changes other options.
-filetype off                      " required by Vundle
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-" setup Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 "----------------------------------------------------------
 " PLUGINS
 "----------------------------------------------------------
 
 " ack - use ack to search through files
-Plugin 'epmatsw/ag.vim'
+NeoBundle 'epmatsw/ag.vim'
 
 " javascript indentation in vim sucks
-Plugin 'pangloss/vim-javascript'
+NeoBundle 'pangloss/vim-javascript'
 
 " CSS
-Plugin 'ChrisYip/Better-CSS-Syntax-for-Vim'
+NeoBundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 
 " Fuzzy file searching
-Plugin 'kien/ctrlp.vim'
+NeoBundle 'kien/ctrlp.vim'
 
 " NerdCommenter - comment blocks of code
-Plugin 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdcommenter'
 
 " NerdTree - displays a neat file explorer window
-Plugin 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree'
 
 " Powerline is a statusline plugin for vim
-Plugin 'Lokaltog/powerline'
+NeoBundle 'Lokaltog/powerline'
 
 " EasyMotion provides a much simpler way to use some motions in vim
-Plugin 'Lokaltog/vim-easymotion'
+NeoBundle 'Lokaltog/vim-easymotion'
 
 " csapprox - make gvim colorschemes work in console
-Plugin 'godlygeek/csapprox'
+NeoBundle 'godlygeek/csapprox'
 
 " Cofeescript support
-Plugin 'kchmck/vim-coffee-script'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " cucumber support
-Plugin 'tpope/vim-cucumber'
+NeoBundle 'tpope/vim-cucumber'
 
 " greplace.vim - plugin that allows search and replace across all of the project files
-Plugin 'skwp/greplace.vim'
+NeoBundle 'skwp/greplace.vim'
 
 " jslint .js files automatically
-" Plugin 'hallettj/jslint.vim'
+" NeoBundle 'hallettj/jslint.vim'
 
 " syntastic - plugin for displaying syntax errors
-Plugin 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 
 " vim-endwise - wisely add 'end' in ruby
-Plugin 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-endwise'
 
 " vim-fugitive - vim-git integration
-Plugin 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-fugitive'
 
 " vim-git - a couple more basic commands to work with git
-Plugin 'tpope/vim-git'
+NeoBundle 'tpope/vim-git'
 
 " vim-bundler to include gems from Gemfile.lock in ctags
-Plugin 'tpope/vim-bundler'
+NeoBundle 'tpope/vim-bundler'
 
 " vim-markdown - syntax highlighting for markdown
-Plugin 'plasticboy/vim-markdown'
+NeoBundle 'plasticboy/vim-markdown'
 
 " vim-matchit - better pair matching for the % command
-Plugin 'matchit.zip'
+NeoBundle 'matchit.zip'
 
 " vim-rake - :Rake, :A, :R like in rails.vim, but without rails
-Plugin 'tpope/vim-rake'
+NeoBundle 'tpope/vim-rake'
 
 " vim-rails - awesome vim-rails integration
-Plugin 'tpope/vim-rails'
+NeoBundle 'tpope/vim-rails'
 
 " vim-ruby - ruby integration
-Plugin 'vim-ruby/vim-ruby'
+NeoBundle 'vim-ruby/vim-ruby'
 
 " vim-ruby-refactoring - automatic refactorings for ruby
-Plugin 'ecomba/vim-ruby-refactoring'
+NeoBundle 'ecomba/vim-ruby-refactoring'
 
 " A nice color scheme
-Plugin 'altercation/vim-colors-solarized'
+NeoBundle 'altercation/vim-colors-solarized'
 
 " cuztomizable tab completion, continued is the newer version
-Plugin 'ervandew/supertab'
+NeoBundle 'ervandew/supertab'
 
-Plugin 'tpope/vim-surround'
+NeoBundle 'tpope/vim-surround'
 
 " haml
-" Plugin "tpope/vim-haml"
+NeoBundle "tpope/vim-haml"
 " snippets
-" Plugin "honza/vim-snippets"
+NeoBundle "honza/vim-snippets"
 
 " Snipmate - the new version
-" Plugin "MarcWeber/vim-addon-mw-utils"
-" Plugin "tomtom/tlib_vim"
-" Plugin "garbas/vim-snipmate"
+NeoBundle "MarcWeber/vim-addon-mw-utils"
+NeoBundle "tomtom/tlib_vim"
+NeoBundle "garbas/vim-snipmate"
 
 " vim-textobj - dependency of rubyblock
-Plugin 'kana/vim-textobj-user'
+NeoBundle 'kana/vim-textobj-user'
 
 " vim-textobj-rubyblock - allow selecting blocks in ruby as text objects
-Plugin 'nelstrom/vim-textobj-rubyblock'
+NeoBundle 'nelstrom/vim-textobj-rubyblock'
 
 " zencoding-vim - plugin for expanding css-like syntax to html
-Plugin 'mattn/zencoding-vim'
+NeoBundle 'mattn/emmet-vim'
 
 " LESS CSS syntax support
-" Plugin "groenewege/vim-less"
+NeoBundle "groenewege/vim-less"
 
 " Adds colors of css 
-" Plugin "skammer/vim-css-color"
+NeoBundle "skammer/vim-css-color"
 
 " Clojure development plugins
-" Plugin "tpope/vim-foreplay"
-" Plugin "tpope/vim-classpath"
-" Plugin "guns/vim-clojure-static"
-" Plugin "kien/rainbow_parentheses"
-
-" rainbow parentheses, mostly for clojure
-" Plugin "kien/rainbow_parentheses.vim"
+NeoBundle "tpope/vim-foreplay"
+NeoBundle "tpope/vim-classpath"
+NeoBundle "guns/vim-clojure-static"
+NeoBundle "kien/rainbow_parentheses.vim"
 
 " automatically close parens
-Plugin 'Townk/vim-autoclose'
+NeoBundle 'Townk/vim-autoclose'
 
 " Gist support
-Plugin 'mattn/gist-vim'
+NeoBundle 'mattn/gist-vim'
 
-call vundle#end()
+call neobundle#end()
 filetype plugin indent on         " Turn on file type detection.
+
+NeoBundleCheck
 
 syntax enable                     " Turn on syntax highlighting.
 
