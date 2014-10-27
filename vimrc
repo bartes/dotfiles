@@ -29,6 +29,12 @@ NeoBundle 'epmatsw/ag.vim'
 " javascript indentation in vim sucks
 NeoBundle 'pangloss/vim-javascript'
 
+" jasmine plugin
+NeoBundle 'claco/jasmine.vim'
+
+" syntax for js§
+NeoBundle 'othree/javascript-libraries-syntax.vim'
+
 " CSS
 NeoBundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 
@@ -137,8 +143,13 @@ NeoBundle "kien/rainbow_parentheses.vim"
 " automatically close parens
 NeoBundle 'Townk/vim-autoclose'
 
+" vim angular
+NeoBundle 'burnettk/vim-angular'
+
 " Gist support
 NeoBundle 'mattn/gist-vim'
+
+NeoBundle 'digitaltoad/vim-jade'
 
 call neobundle#end()
 filetype plugin indent on         " Turn on file type detection.
