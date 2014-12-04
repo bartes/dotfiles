@@ -151,6 +151,8 @@ NeoBundle 'mattn/gist-vim'
 
 NeoBundle 'digitaltoad/vim-jade'
 
+NeoBundle 'ngmy/vim-rubocop'
+
 call neobundle#end()
 filetype plugin indent on         " Turn on file type detection.
 
