@@ -40,6 +40,8 @@ NeoBundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 
 " Fuzzy file searching
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tacahiroy/ctrlp-funky'
+NeoBundle 'd11wtq/ctrlp_bdelete.vim'
 
 " NerdCommenter - comment blocks of code
 NeoBundle 'scrooloose/nerdcommenter'
