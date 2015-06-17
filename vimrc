@@ -48,6 +48,7 @@ NeoBundle 'scrooloose/nerdcommenter'
 
 " NerdTree - displays a neat file explorer window
 NeoBundle 'scrooloose/nerdtree'
+" NeoBundle 'jistr/vim-nerdtree-tabs'
 
 " Powerline is a statusline plugin for vim
 NeoBundle 'Lokaltog/powerline'
@@ -60,9 +61,6 @@ NeoBundle 'godlygeek/csapprox'
 
 " Cofeescript support
 NeoBundle 'kchmck/vim-coffee-script'
-
-" cucumber support
-NeoBundle 'tpope/vim-cucumber'
 
 " greplace.vim - plugin that allows search and replace across all of the project files
 NeoBundle 'skwp/greplace.vim'
@@ -109,6 +107,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 " cuztomizable tab completion, continued is the newer version
 NeoBundle 'ervandew/supertab'
 
+" surround string
 NeoBundle 'tpope/vim-surround'
 
 " haml
@@ -154,6 +153,19 @@ NeoBundle 'mattn/gist-vim'
 NeoBundle 'digitaltoad/vim-jade'
 
 NeoBundle 'ngmy/vim-rubocop'
+
+" react js
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'justinj/vim-react-snippets'
+
+" gulp
+NeoBundle 'KabbAmine/gulp-vim'
+
+" jumping to definition
+NeoBundle 'xmisao/rubyjump.vim'
+
+" json vim
+NeoBundle 'elzr/vim-json'
 
 call neobundle#end()
 filetype plugin indent on         " Turn on file type detection.
