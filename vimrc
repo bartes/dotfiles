@@ -110,6 +110,9 @@ NeoBundle 'ervandew/supertab'
 " surround string
 NeoBundle 'tpope/vim-surround'
 
+" surround ES6 syntax
+NeoBundle 'isRuslan/vim-es6'
+
 " haml
 NeoBundle "tpope/vim-haml"
 " snippets
@@ -423,6 +426,10 @@ colors railscasts
 " don't search coverage reports and vcr cassettes
 set wildignore+=spec/reports
 set wildignore+=spec/cassettes
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip 
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = 'find %s -type f'
 
 " Use Node.js for JavaScript interpretation
 let $JS_CMD='node'

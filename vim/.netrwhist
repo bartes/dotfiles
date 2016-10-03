@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/bartes/dotfiles'
 let g:netrw_dirhist_2='/Users/bartes'
 let g:netrw_dirhist_3='/Users/bartes/dotfiles'
+let g:netrw_dirhist_4='/Users/Bartek/Projects/amicus/brief-api'
