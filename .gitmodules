@@ -16,6 +16,6 @@
 [submodule "mate-terminal-colors-solarized"]
 	path = mate-terminal-colors-solarized
 	url = git://github.com/michelefoga/mate-terminal-colors-solarized.git
-[submodule "config/irb-config"]
-	path = config/irb-config
+[submodule "irb-config"]
+	path = irb-config
 	url = git://github.com/nviennot/irb-config.git
