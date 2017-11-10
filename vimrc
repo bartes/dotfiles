@@ -22,6 +22,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "----------------------------------------------------------
 " PLUGINS
 "----------------------------------------------------------
+"
+" NeoBundle 'wannesm/rmvim.vim'
 
 " ack - use ack to search through files
 NeoBundle 'epmatsw/ag.vim'
@@ -110,9 +112,6 @@ NeoBundle 'ervandew/supertab'
 " surround string
 NeoBundle 'tpope/vim-surround'
 
-" surround ES6 syntax
-NeoBundle 'isRuslan/vim-es6'
-
 " haml
 NeoBundle "tpope/vim-haml"
 " snippets
@@ -122,6 +121,9 @@ NeoBundle "honza/vim-snippets"
 NeoBundle "MarcWeber/vim-addon-mw-utils"
 NeoBundle "tomtom/tlib_vim"
 NeoBundle "garbas/vim-snipmate"
+
+" surround ES6 syntax
+NeoBundle 'isRuslan/vim-es6'
 
 " vim-textobj - dependency of rubyblock
 NeoBundle 'kana/vim-textobj-user'
@@ -148,7 +150,7 @@ NeoBundle "kien/rainbow_parentheses.vim"
 NeoBundle 'Townk/vim-autoclose'
 
 " vim angular
-NeoBundle 'burnettk/vim-angular'
+NeoBundle 'mhartington/vim-angular2-snippets'
 
 " Gist support
 NeoBundle 'mattn/gist-vim'
@@ -169,6 +171,21 @@ NeoBundle 'xmisao/rubyjump.vim'
 
 " json vim
 NeoBundle 'elzr/vim-json'
+
+" typescript
+NeoBundle 'leafgarland/typescript-vim'
+
+" repeat.vim: enable repeating supported plugin maps with .
+NeoBundle 'tpope/vim-repeat'
+
+" A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
+NeoBundle 'airblade/vim-gitgutter'
+
+" lean & mean status/tabline for vim that's light as air
+NeoBundle 'bling/vim-airline'
+
+" Vim plugin that displays tags in a window, ordered by scope
+NeoBundle 'majutsushi/tagbar'
 
 call neobundle#end()
 filetype plugin indent on         " Turn on file type detection.
@@ -274,15 +291,31 @@ map <C-DOWN> <C-w>j
 map <C-UP> <C-w>k
 map <C-RIGHT> <C-w>l
 
+" comments
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+
 " syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_enable_signs=1
-let g:syntastic_disabled_filetypes = ['eruby']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_jump = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_signs = 0
+let g:syntastic_disabled_filetypes=['html']
+" let g:syntastic_haml_checkers = ['haml_lint']
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_typescript_checkers = ['tslint']
+" let g:syntastic_debug = 3
+" nmap <leader>sc :SyntasticCheck<CR>
 
 " nerd tree
 map <silent> <leader>n :NERDTreeFind<CR>
+let NERDTreeShowHidden=1
 
 " zencoding-vim
 let g:user_zen_expandabbr_key = '<c-e>' 
@@ -294,9 +327,6 @@ let g:CommandTMaxFiles = 100000
 " spell-checking related shortcuts
 nmap <silent> <leader>lp :set spelllang=pl_pl<CR>
 nmap <silent> <leader>le :set spelllang=en_us<CR>
-
-" ignore gems bundled in the project directory
-set wildignore+=vendor/gems,vendor/bundle
 
 " ignore target directory in clojure projects
 set wildignore+=target
@@ -425,11 +455,14 @@ colors railscasts
 
 " don't search coverage reports and vcr cassettes
 set wildignore+=spec/reports
+set wildignore+=coverage
 set wildignore+=spec/cassettes
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip 
-
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_user_command = 'find %s -type f'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,tags
+" let g:ctrlp_user_command = 'find %s -type f'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|\.bundle|log|tmp|tags|node_modules|bower_components)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
 
 " Use Node.js for JavaScript interpretation
 let $JS_CMD='node'
