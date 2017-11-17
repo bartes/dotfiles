@@ -344,6 +344,9 @@ nmap <silent> <leader>gsp :Git stash pop<cr>
 nnoremap qw :silent! normal "zyiw<Esc>:let @z="'".@z."'"<CR>cw<c-r>z<Esc>b
 nnoremap qd :silent! normal "zyiw<Esc>:let @z="\"".@z."\""<CR>cw<c-r>z<Esc>b
 
+" Ag ignore
+let g:agprg='ag -S --vimgrep --ignore node_modules --ignore coverage --ignore tags'
+
 " rainbow parentheses always on
 " au VimEnter * RainbowParenthesesToggle
 " au Syntax * RainbowParenthesesLoadRound
