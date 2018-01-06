@@ -69,5 +69,5 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export NVM_DIR=~/.nvm
 . $(brew --prefix nvm)/nvm.sh
 
-source /Users/Bartek/.profile
+source "$HOME/.profile"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
