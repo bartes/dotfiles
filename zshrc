@@ -51,6 +51,8 @@ source $ZSH/oh-my-zsh.sh
 # for some reason, this is necessary to make the keybindings work properly
 source ~/dotfiles/oh-my-zsh/lib/key-bindings.zsh
 
+export PATH="/usr/local/opt/postgresql@9.3/bin:$PATH"
+
 export PATH="/usr/X11R6/bin:/usr/local/share/npm/bin:$PATH"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -66,3 +68,6 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 export NVM_DIR=~/.nvm
 . $(brew --prefix nvm)/nvm.sh
+
+source /Users/Bartek/.profile
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

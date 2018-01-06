@@ -187,6 +187,12 @@ NeoBundle 'bling/vim-airline'
 " Vim plugin that displays tags in a window, ordered by scope
 NeoBundle 'majutsushi/tagbar'
 
+" autoformat
+NeoBundle 'Chiel92/vim-autoformat'
+
+" json
+NeoBundle 'XadillaX/json-formatter.vim'
+
 call neobundle#end()
 filetype plugin indent on         " Turn on file type detection.
 
