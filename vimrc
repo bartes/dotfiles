@@ -8,195 +8,199 @@
 "==========================================================
 
 "----------------------------------------------------------
-" NeoBundle
+" Dein
 "----------------------------------------------------------
-if has('vim_starting')
+if &compatible
   set nocompatible
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+set runtimepath+=~/.vim/bundles/repos/github.com/Shougo/dein.vim
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+if dein#load_state('~/.vim/bundles')
+  call dein#begin('~/.vim/bundles')
+
+  call dein#add('~/.vim/bundles')
+  call dein#add('Shougo/deoplete.nvim')
 
 "----------------------------------------------------------
 " PLUGINS
 "----------------------------------------------------------
 "
-" NeoBundle 'wannesm/rmvim.vim'
-
+" call dein#add('wannesm/rmvim.vim')
+ 
 " ack - use ack to search through files
-NeoBundle 'epmatsw/ag.vim'
-
+call dein#add('epmatsw/ag.vim')
+ 
 " javascript indentation in vim sucks
-NeoBundle 'pangloss/vim-javascript'
-
+call dein#add('pangloss/vim-javascript')
+ 
 " jasmine plugin
-NeoBundle 'claco/jasmine.vim'
-
+call dein#add('claco/jasmine.vim')
+ 
 " syntax for js§
-NeoBundle 'othree/javascript-libraries-syntax.vim'
-
+call dein#add('othree/javascript-libraries-syntax.vim')
+ 
 " CSS
-NeoBundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
-
+call dein#add('ChrisYip/Better-CSS-Syntax-for-Vim')
+ 
 " Fuzzy file searching
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'tacahiroy/ctrlp-funky'
-NeoBundle 'd11wtq/ctrlp_bdelete.vim'
-
+call dein#add('kien/ctrlp.vim')
+ call dein#add('tacahiroy/ctrlp-funky')
+ call dein#add('d11wtq/ctrlp_bdelete.vim')
+ 
 " NerdCommenter - comment blocks of code
-NeoBundle 'scrooloose/nerdcommenter'
-
+call dein#add('scrooloose/nerdcommenter')
+ 
 " NerdTree - displays a neat file explorer window
-NeoBundle 'scrooloose/nerdtree'
-" NeoBundle 'jistr/vim-nerdtree-tabs'
-
+call dein#add('scrooloose/nerdtree')
+ " call dein#add('jistr/vim-nerdtree-tabs')
+ 
 " Powerline is a statusline plugin for vim
-NeoBundle 'Lokaltog/powerline'
-
+call dein#add('Lokaltog/powerline')
+ 
 " EasyMotion provides a much simpler way to use some motions in vim
-NeoBundle 'Lokaltog/vim-easymotion'
-
+call dein#add('Lokaltog/vim-easymotion')
+ 
 " csapprox - make gvim colorschemes work in console
-NeoBundle 'godlygeek/csapprox'
-
+call dein#add('godlygeek/csapprox')
+ 
 " Cofeescript support
-NeoBundle 'kchmck/vim-coffee-script'
-
+call dein#add('kchmck/vim-coffee-script')
+ 
 " greplace.vim - plugin that allows search and replace across all of the project files
-NeoBundle 'skwp/greplace.vim'
-
+call dein#add('skwp/greplace.vim')
+ 
 " jslint .js files automatically
-" NeoBundle 'hallettj/jslint.vim'
-
+" call dein#add('hallettj/jslint.vim')
+ 
 " syntastic - plugin for displaying syntax errors
-NeoBundle 'scrooloose/syntastic'
-
+call dein#add('scrooloose/syntastic')
+ 
 " vim-endwise - wisely add 'end' in ruby
-NeoBundle 'tpope/vim-endwise'
-
+call dein#add('tpope/vim-endwise')
+ 
 " vim-fugitive - vim-git integration
-NeoBundle 'tpope/vim-fugitive'
-
+call dein#add('tpope/vim-fugitive')
+ 
 " vim-git - a couple more basic commands to work with git
-NeoBundle 'tpope/vim-git'
-
+call dein#add('tpope/vim-git')
+ 
 " vim-bundler to include gems from Gemfile.lock in ctags
-NeoBundle 'tpope/vim-bundler'
-
+call dein#add('tpope/vim-bundler')
+ 
 " vim-markdown - syntax highlighting for markdown
-NeoBundle 'plasticboy/vim-markdown'
-
+call dein#add('plasticboy/vim-markdown')
+ 
 " vim-matchit - better pair matching for the % command
-NeoBundle 'matchit.zip'
-
+call dein#add('vim-scripts/matchit.zip')
+ 
 " vim-rake - :Rake, :A, :R like in rails.vim, but without rails
-NeoBundle 'tpope/vim-rake'
-
+call dein#add('tpope/vim-rake')
+ 
 " vim-rails - awesome vim-rails integration
-NeoBundle 'tpope/vim-rails'
-
+call dein#add('tpope/vim-rails')
+ 
 " vim-ruby - ruby integration
-NeoBundle 'vim-ruby/vim-ruby'
-
+call dein#add('vim-ruby/vim-ruby')
+ 
 " vim-ruby-refactoring - automatic refactorings for ruby
-NeoBundle 'ecomba/vim-ruby-refactoring'
-
+call dein#add('ecomba/vim-ruby-refactoring')
+ 
 " A nice color scheme
-NeoBundle 'altercation/vim-colors-solarized'
-
+call dein#add('altercation/vim-colors-solarized')
+ 
 " cuztomizable tab completion, continued is the newer version
-NeoBundle 'ervandew/supertab'
-
+call dein#add('ervandew/supertab')
+ 
 " surround string
-NeoBundle 'tpope/vim-surround'
-
+call dein#add('tpope/vim-surround')
+ 
 " haml
-NeoBundle "tpope/vim-haml"
-" snippets
-NeoBundle "honza/vim-snippets"
-
+call dein#add("tpope/vim-haml")
+ " snippets
+call dein#add("honza/vim-snippets")
+ 
 " Snipmate - the new version
-NeoBundle "MarcWeber/vim-addon-mw-utils"
-NeoBundle "tomtom/tlib_vim"
-NeoBundle "garbas/vim-snipmate"
-
+call dein#add("MarcWeber/vim-addon-mw-utils")
+ call dein#add("tomtom/tlib_vim")
+ call dein#add("garbas/vim-snipmate")
+ 
 " surround ES6 syntax
-NeoBundle 'isRuslan/vim-es6'
-
+call dein#add('isRuslan/vim-es6')
+ 
 " vim-textobj - dependency of rubyblock
-NeoBundle 'kana/vim-textobj-user'
-
+call dein#add('kana/vim-textobj-user')
+ 
 " vim-textobj-rubyblock - allow selecting blocks in ruby as text objects
-NeoBundle 'nelstrom/vim-textobj-rubyblock'
-
+call dein#add('nelstrom/vim-textobj-rubyblock')
+ 
 " zencoding-vim - plugin for expanding css-like syntax to html
-NeoBundle 'mattn/emmet-vim'
-
+call dein#add('mattn/emmet-vim')
+ 
 " LESS CSS syntax support
-NeoBundle "groenewege/vim-less"
-
+call dein#add("groenewege/vim-less")
+ 
 " Adds colors of css 
-NeoBundle "skammer/vim-css-color"
-
+call dein#add("skammer/vim-css-color")
+ 
 " Clojure development plugins
-NeoBundle "tpope/vim-foreplay"
-NeoBundle "tpope/vim-classpath"
-NeoBundle "guns/vim-clojure-static"
-NeoBundle "kien/rainbow_parentheses.vim"
-
+call dein#add("tpope/vim-foreplay")
+ call dein#add("tpope/vim-classpath")
+ call dein#add("guns/vim-clojure-static")
+ call dein#add("kien/rainbow_parentheses.vim")
+ 
 " automatically close parens
-NeoBundle 'Townk/vim-autoclose'
-
+call dein#add('Townk/vim-autoclose')
+ 
 " vim angular
-NeoBundle 'mhartington/vim-angular2-snippets'
-
+call dein#add('mhartington/vim-angular2-snippets')
+ 
 " Gist support
-NeoBundle 'mattn/gist-vim'
-
-NeoBundle 'digitaltoad/vim-jade'
-
-NeoBundle 'ngmy/vim-rubocop'
-
+call dein#add('mattn/gist-vim')
+ 
+call dein#add('digitaltoad/vim-jade')
+ 
+call dein#add('ngmy/vim-rubocop')
+ 
 " react js
-NeoBundle 'mxw/vim-jsx'
-NeoBundle 'justinj/vim-react-snippets'
-
+call dein#add('mxw/vim-jsx')
+ call dein#add('justinj/vim-react-snippets')
+ 
 " gulp
-NeoBundle 'KabbAmine/gulp-vim'
-
+call dein#add('KabbAmine/gulp-vim')
+ 
 " jumping to definition
-NeoBundle 'xmisao/rubyjump.vim'
-
+call dein#add('xmisao/rubyjump.vim')
+ 
 " json vim
-NeoBundle 'elzr/vim-json'
-
+call dein#add('elzr/vim-json')
+ 
 " typescript
-NeoBundle 'leafgarland/typescript-vim'
-
+call dein#add('leafgarland/typescript-vim')
+ 
 " repeat.vim: enable repeating supported plugin maps with .
-NeoBundle 'tpope/vim-repeat'
-
+call dein#add('tpope/vim-repeat')
+ 
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
-NeoBundle 'airblade/vim-gitgutter'
-
+call dein#add('airblade/vim-gitgutter')
+ 
 " lean & mean status/tabline for vim that's light as air
-NeoBundle 'bling/vim-airline'
-
+call dein#add('bling/vim-airline')
+ 
 " Vim plugin that displays tags in a window, ordered by scope
-NeoBundle 'majutsushi/tagbar'
-
+call dein#add('majutsushi/tagbar')
+ 
 " autoformat
-NeoBundle 'Chiel92/vim-autoformat'
-
+call dein#add('Chiel92/vim-autoformat')
+ 
 " json
-NeoBundle 'XadillaX/json-formatter.vim'
+call dein#add('XadillaX/json-formatter.vim')
+ 
+  call dein#end()
+  call dein#save_state()
+endif
 
-call neobundle#end()
 filetype plugin indent on         " Turn on file type detection.
-
-NeoBundleCheck
 
 syntax enable                     " Turn on syntax highlighting.
 

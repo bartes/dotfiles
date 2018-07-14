@@ -61,10 +61,10 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 alias pg-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pg-stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
 export NVM_DIR=~/.nvm
 . $(brew --prefix nvm)/nvm.sh
 
 source "$HOME/.profile"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(rbenv init -)"
