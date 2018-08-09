@@ -321,7 +321,7 @@ let g:syntastic_disabled_filetypes=['html']
 " let g:syntastic_javascript_checkers = ['eslint']
 " let g:syntastic_typescript_checkers = ['tslint']
 " let g:syntastic_debug = 3
-" nmap <leader>sc :SyntasticCheck<CR>
+nmap <leader>sc :SyntasticCheck<CR>
 
 " nerd tree
 map <silent> <leader>n :NERDTreeFind<CR>
@@ -485,3 +485,5 @@ if &diff
   colorscheme fu_patched " different scheme
   set nonumber " no line numbers
 endif
+
+nmap <silent> <leader>json :%!python -m json.tool<cr>
