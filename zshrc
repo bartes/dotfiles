@@ -50,16 +50,15 @@ source $ZSH/oh-my-zsh.sh
 # for some reason, this is necessary to make the keybindings work properly
 source ~/dotfiles/oh-my-zsh/lib/key-bindings.zsh
 
-export PATH="/usr/local/opt/postgresql@9.3/bin:$PATH"
+#export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
 export PATH="/usr/X11R6/bin:/usr/local/share/npm/bin:$PATH"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-
-alias pg-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias pg-stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+# alias pg-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+# alias pg-stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 export NVM_DIR=~/.nvm
 . $(brew --prefix nvm)/nvm.sh
@@ -68,4 +67,12 @@ source "$HOME/.profile"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(rbenv init -)"
+export NODE_OPTIONS=--max_old_space_size=8096
+export CASTLE_IP="127.0.0.1"
+
+export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id);
+export AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key);
+export AWS_DEFAULT_REGION=$(aws configure get region);
+
+eval "$(luarocks --lua-dir=/usr/local/opt/lua@5.1 path)"
 export CASTLE_IP="127.0.0.1"
