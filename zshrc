@@ -5,6 +5,8 @@ export ZSH=$HOME/dotfiles/oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 export ZSH_THEME="gallois"
 
+export ZSH_DISABLE_COMPFIX=true
+
 export PATH=~/scripts:$PATH
 
 export EDITOR=mvim
