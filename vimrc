@@ -11,16 +11,19 @@
 " Dein
 "----------------------------------------------------------
 if &compatible
-  set nocompatible
+  set nocompatible               " Be iMproved
 endif
 
-set runtimepath+=~/.vim/bundles/repos/github.com/Shougo/dein.vim
+" Required:
+set runtimepath+=/Users/Bartek/.vim/bundles/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/.vim/bundles')
-  call dein#begin('~/.vim/bundles')
+" Required:
+if dein#load_state('/Users/Bartek/.vim/bundles')
+  call dein#begin('/Users/Bartek/.vim/bundles')
 
-  call dein#add('~/.vim/bundles')
-  call dein#add('Shougo/deoplete.nvim')
+  " Let dein manage dein
+  " Required:
+  call dein#add('/Users/Bartek/.vim/bundles/repos/github.com/Shougo/dein.vim')
 
 "----------------------------------------------------------
 " PLUGINS
@@ -45,8 +48,8 @@ call dein#add('ChrisYip/Better-CSS-Syntax-for-Vim')
  
 " Fuzzy file searching
 call dein#add('kien/ctrlp.vim')
- call dein#add('tacahiroy/ctrlp-funky')
- call dein#add('d11wtq/ctrlp_bdelete.vim')
+call dein#add('tacahiroy/ctrlp-funky')
+call dein#add('d11wtq/ctrlp_bdelete.vim')
  
 " NerdCommenter - comment blocks of code
 call dein#add('scrooloose/nerdcommenter')
@@ -195,9 +198,18 @@ call dein#add('Chiel92/vim-autoformat')
  
 " json
 call dein#add('XadillaX/json-formatter.vim')
- 
-  call dein#end()
-  call dein#save_state()
+
+" prettier
+call dein#add('prettier/vim-prettier')
+
+" Required:
+call dein#end()
+call dein#save_state()
+endif
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
 endif
 
 filetype plugin indent on         " Turn on file type detection.
