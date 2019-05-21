@@ -15,15 +15,15 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/Bartek/.vim/bundles/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.vim/bundles/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/Users/Bartek/.vim/bundles')
-  call dein#begin('/Users/Bartek/.vim/bundles')
+if dein#load_state('~/.vim/bundles')
+  call dein#begin('~/.vim/bundles')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/Users/Bartek/.vim/bundles/repos/github.com/Shougo/dein.vim')
+  call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
 
 "----------------------------------------------------------
 " PLUGINS
@@ -368,6 +368,10 @@ nnoremap qd :silent! normal "zyiw<Esc>:let @z="\"".@z."\""<CR>cw<c-r>z<Esc>b
 
 " Ag ignore
 let g:agprg='ag -S --vimgrep --ignore node_modules --ignore coverage --ignore tags'
+
+" Greplace
+set grepprg=ag
+let g:grep_cmd_opts = '--line-numbers --noheading'
 
 " rainbow parentheses always on
 " au VimEnter * RainbowParenthesesToggle
