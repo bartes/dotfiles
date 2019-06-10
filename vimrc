@@ -97,9 +97,6 @@ call dein#add('plasticboy/vim-markdown')
 " vim-matchit - better pair matching for the % command
 call dein#add('vim-scripts/matchit.zip')
  
-" vim-rake - :Rake, :A, :R like in rails.vim, but without rails
-call dein#add('tpope/vim-rake')
- 
 " vim-rails - awesome vim-rails integration
 call dein#add('tpope/vim-rails')
  
@@ -120,22 +117,15 @@ call dein#add('tpope/vim-surround')
  
 " haml
 call dein#add("tpope/vim-haml")
- " snippets
-call dein#add("honza/vim-snippets")
- 
+
 " Snipmate - the new version
 call dein#add("MarcWeber/vim-addon-mw-utils")
- call dein#add("tomtom/tlib_vim")
- call dein#add("garbas/vim-snipmate")
+call dein#add("tomtom/tlib_vim")
+call dein#add("garbas/vim-snipmate")
+call dein#add("honza/vim-snippets")
  
 " surround ES6 syntax
 call dein#add('isRuslan/vim-es6')
- 
-" vim-textobj - dependency of rubyblock
-call dein#add('kana/vim-textobj-user')
- 
-" vim-textobj-rubyblock - allow selecting blocks in ruby as text objects
-call dein#add('nelstrom/vim-textobj-rubyblock')
  
 " zencoding-vim - plugin for expanding css-like syntax to html
 call dein#add('mattn/emmet-vim')
@@ -148,15 +138,12 @@ call dein#add("skammer/vim-css-color")
  
 " Clojure development plugins
 call dein#add("tpope/vim-foreplay")
- call dein#add("tpope/vim-classpath")
- call dein#add("guns/vim-clojure-static")
- call dein#add("kien/rainbow_parentheses.vim")
+call dein#add("tpope/vim-classpath")
+call dein#add("guns/vim-clojure-static")
+call dein#add("kien/rainbow_parentheses.vim")
  
 " automatically close parens
 call dein#add('Townk/vim-autoclose')
- 
-" vim angular
-call dein#add('mhartington/vim-angular2-snippets')
  
 " Gist support
 call dein#add('mattn/gist-vim')
@@ -164,13 +151,6 @@ call dein#add('mattn/gist-vim')
 call dein#add('digitaltoad/vim-jade')
  
 call dein#add('ngmy/vim-rubocop')
- 
-" react js
-call dein#add('mxw/vim-jsx')
- call dein#add('justinj/vim-react-snippets')
- 
-" gulp
-call dein#add('KabbAmine/gulp-vim')
  
 " jumping to definition
 call dein#add('xmisao/rubyjump.vim')
@@ -192,9 +172,6 @@ call dein#add('bling/vim-airline')
  
 " Vim plugin that displays tags in a window, ordered by scope
 call dein#add('majutsushi/tagbar')
- 
-" autoformat
-call dein#add('Chiel92/vim-autoformat')
  
 " json
 call dein#add('XadillaX/json-formatter.vim')
