@@ -42,6 +42,7 @@
 [user]
 	name = bartes
 	email = bartesrlz@gmail.com
+	signingkey = 883E347F4E1B1077
 [color]
 	ui = auto
 [push]
@@ -63,3 +64,5 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[commit]
+	gpgsign = true
