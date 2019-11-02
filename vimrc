@@ -293,6 +293,7 @@ map <C-RIGHT> <C-w>l
 " comments
 let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
+let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTrimTrailingWhitespace = 1
 
 " syntastic
@@ -315,6 +316,8 @@ nmap <leader>sc :SyntasticCheck<CR>
 " nerd tree
 map <silent> <leader>n :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
+let NERDTreeMinimalUI=1
+let NERDTreeDirArrows=1
 
 " zencoding-vim
 let g:user_zen_expandabbr_key = '<c-e>' 
