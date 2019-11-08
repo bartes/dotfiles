@@ -136,12 +136,6 @@ call dein#add("groenewege/vim-less")
 " Adds colors of css 
 call dein#add("skammer/vim-css-color")
  
-" Clojure development plugins
-call dein#add("tpope/vim-foreplay")
-call dein#add("tpope/vim-classpath")
-call dein#add("guns/vim-clojure-static")
-call dein#add("kien/rainbow_parentheses.vim")
- 
 " automatically close parens
 call dein#add('Townk/vim-autoclose')
  
@@ -152,14 +146,15 @@ call dein#add('digitaltoad/vim-jade')
  
 call dein#add('ngmy/vim-rubocop')
  
-" jumping to definition
-call dein#add('xmisao/rubyjump.vim')
- 
 " json vim
 call dein#add('elzr/vim-json')
  
 " typescript
 call dein#add('leafgarland/typescript-vim')
+call dein#add('Quramy/tsuquyomi')
+call dein#add('Quramy/vim-js-pretty-template')
+call dein#add('jason0x43/vim-js-indent')
+
  
 " repeat.vim: enable repeating supported plugin maps with .
 call dein#add('tpope/vim-repeat')
@@ -275,7 +270,10 @@ nnoremap k gk
 au BufNewFile,BufRead *.md set filetype=markdown
 
 " automatically strip trailing whitespace for some file types
-autocmd FileType c,cpp,java,php,javascript,html,ruby autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+autocmd FileType c,cpp,java,php,javascript,typescript,html,ruby autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+
+" set autocompletion for typescript
+autocmd FileType typescript setlocal completeopt+=menu,preview
 
 " Easy window navigation
 map <C-h> <C-w>h:wa<cr>
@@ -309,9 +307,12 @@ let g:syntastic_enable_signs = 0
 let g:syntastic_disabled_filetypes=['html']
 " let g:syntastic_haml_checkers = ['haml_lint']
 " let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_typescript_checkers = ['tslint']
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi', 'tslint'] " You shouldn't use 'tsc' checker.
 " let g:syntastic_debug = 3
 nmap <leader>sc :SyntasticCheck<CR>
+
+autocmd FileType typescript nmap <buffer> <Leader>e <Plug>(TsuquyomiRenameSymbolC)
 
 " nerd tree
 map <silent> <leader>n :NERDTreeFind<CR>
@@ -352,12 +353,6 @@ let g:agprg='ag -S --vimgrep --ignore node_modules --ignore coverage --ignore ta
 " Greplace
 set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
-
-" rainbow parentheses always on
-" au VimEnter * RainbowParenthesesToggle
-" au Syntax * RainbowParenthesesLoadRound
-" au Syntax * RainbowParenthesesLoadSquare
-" au Syntax * RainbowParenthesesLoadBraces
 
 " Don't indent midje facts
 let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', 'fact']
@@ -482,4 +477,4 @@ if &diff
   set nonumber " no line numbers
 endif
 
-nmap <silent> <leader>json :%!python -m json.tool<cr>
+nmap <silent> <leader>j :%!python -m json.tool<cr>
