@@ -39,6 +39,9 @@ call dein#add('pangloss/vim-javascript')
  
 " jasmine plugin
 call dein#add('claco/jasmine.vim')
+
+" elixir plugin
+call dein#add('elixir-editors/vim-elixir')
  
 " syntax for js§
 call dein#add('othree/javascript-libraries-syntax.vim')
