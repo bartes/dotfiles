@@ -297,6 +297,9 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTrimTrailingWhitespace = 1
 
+" snipmate
+let g:snipMate = { 'snippet_version' : 1 }
+
 " syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
